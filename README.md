@@ -1,54 +1,40 @@
 # IotGoogleAlarm
-Alarm system , works with google assistant , with wifi arduino or ESP 
+
+Security alarm , works with google assistant , and with any wifi arduino or ESP
 
 
 #Process Overview
-when the user starts the alarm by saying “ turn seucity system on “
 
-google sends to a webhook that changes one of the virtual pins, the system  turns on , 
+starts the alarm by saying “ turn seucity system on “
 
-when a movement does occurs  , a virtual pin gets changed that sets off a webhook in the blyink , 
+when a movement occurs , a virtual pin changes,setting off a webhook in the blyink , notifying the user 
 
-the webhook starts an event that the alarm has been set off , as well as notify the user 
+if a wrong password is entered , and the user is notified
 
-if the user tries and fails to open the alarm , a wrongPass event is set off , and the user is notified
+#Instructions
 
-when the user enters the right password by saying “turn security off, the password is “ 
+connect the Pir & Screen & buzzer in the desired pins (you can change the pins in the code)
 
-a google assistant will trigger a webhook that sends the password for checking in the esp and turns the system off
+insert your blynk token & wifi name , password
 
+and configure your IFTT & blynk like the photos
 
-#IFTT Instructions
-| Tables        | Are           |
-| ------------- |:-------------:|
-| col 3 is      |  
- 	When the alarm is turned on , if a movement happens, it changes a virtual pin , that in the blynk app , triggers a web hook, the web hook sents a message to the user warning him  	
-|
-| col 2 is      |  
-
- 	When the system receives a password from a virtual pin , if the password is incorrect, it sends the user a message warning him , throught a webhook that starts from blynk , and sends a message to the user	
-     |
-| zebra stripes |  
- 
-
- 
+and thats it , you have a portable wifi security system :D
 
 
- 
+#IFTT screenshots
+![alt text](https://github.com/kareemNass2357/IotGoogleAlarm/blob/main/instruction%20images/iftt12.png?raw=true)
+![alt text](https://github.com/kareemNass2357/IotGoogleAlarm/blob/main/instruction%20images/iftt22.png?raw=true)
 
- 
+![alt text](https://github.com/kareemNass2357/IotGoogleAlarm/blob/main/instruction%20images/iftt32.png?raw=true)
+
+![alt text](https://github.com/kareemNass2357/IotGoogleAlarm/blob/main/instruction%20images/iftt33.png?raw=true)
+
+![alt text](https://github.com/kareemNass2357/IotGoogleAlarm/blob/main/instruction%20images/iftt35.png?raw=true)
+
+![alt text](https://github.com/kareemNass2357/IotGoogleAlarm/blob/main/instruction%20images/iftt42.png?raw=true)
 
 
-
-
-
-
-
-	The user sends a password with the google assistant , and sends the password to a webhook that changes a virtual pin directly and the esp catches it and tries to compare it io its own password 
-
-| zebra stripes | When the user tells google assist to trunt he system on , it changes a virtual pin through a webhook directly and the esp , turns the alarm on , and notifies the user with the screen 	
-     |
-| zebra stripes | are neat      |     |
 
 
 
